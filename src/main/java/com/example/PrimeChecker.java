@@ -1,10 +1,9 @@
 package com.example;
 
-package com.example;
 
 public class PrimeChecker {
 
     public boolean isPrime(int number) {
-        return false;
+        throw new  UnsupportedOperationException("Not implemented yet");
     }
 }

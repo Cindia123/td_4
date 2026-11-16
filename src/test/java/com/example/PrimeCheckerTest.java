@@ -1,16 +1,16 @@
 package com.example;
 
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.jupiter.api.Test;
 
+
 public class PrimeCheckerTest {
 
-    private final PrimeChecker checker = new PrimeChecker();
+    private final PrimeChecker primeChecker = new PrimeChecker();
 
     @Test
-    void twoAndThreeArePrime() {
-        assertTrue(checker.isPrime(0));
+    public void test0IsNotPrime() {
+        assertFalse(primeChecker.isPrime(0), "0 Should not be considered a prime number");
     }
 }
