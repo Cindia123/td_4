@@ -1,16 +1,24 @@
+
 package com.example;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-
 import org.junit.jupiter.api.Test;
-
 
 public class PrimeCheckerTest {
 
     private final PrimeChecker primeChecker = new PrimeChecker();
 
+    // Test 0: 0 is not a prime number
     @Test
     public void test0IsNotPrime() {
-        assertFalse(primeChecker.isPrime(0), "0 Should not be considered a prime number");
+        assertFalse(primeChecker.isPrime(0),
+            "0 should not be considered a prime number");
+    }
+
+    // RED 1: 1 is not a prime number
+    @Test
+    public void test1IsNotPrime() {
+        assertFalse(primeChecker.isPrime(1),
+            "1 should not be considered a prime number");
     }
 }
