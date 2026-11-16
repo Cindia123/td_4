@@ -4,6 +4,8 @@ package com.example;
 public class PrimeChecker {
 
     /**
+     * Determines whether a number is prime.
+     *
      * @param number the number to check (assumed valid, starting at 0)
      * @return true if the number is prime, false otherwise
      */
@@ -11,8 +13,12 @@ public class PrimeChecker {
         if (number < 2) {
             return false;
         }
-        for (int i = 2; (long) i * i <= number; i++) {
-            if (number % i == 0) {
+        return hasNoDivisorUpToSquareRoot(number);
+    }
+
+    private boolean hasNoDivisorUpToSquareRoot(int number) {
+        for (int divisor = 2; (long) divisor * divisor <= number; divisor++) {
+            if (number % divisor == 0) {
                 return false;
             }
         }
